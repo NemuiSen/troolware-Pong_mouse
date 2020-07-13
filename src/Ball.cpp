@@ -3,7 +3,7 @@
 Ball::~Ball()
 {
 	cout << endl << "\r";
-	cout << "[" << (lr.x == lr.y ? "Empate" : "Ganador: " + (string)(lr.x > lr.y ? "Izquierda" : "Derecha")) << "]" << endl;
+	cout << "[" << (lr.x == lr.y ? "Empate" : "Ganador: " + (string)(lr.x > lr.y ? "Izquierda" : "Derecha")) << "]\n\n";
 	system("pause");
 }
 
@@ -23,10 +23,10 @@ void Ball::update(GLFWwindow *window)
 	{
 		flipX();
 
-			 if (pos.x <= 0		   ) ++lr.x;
-		else if (pos.x >= winsize.x) ++lr.y;
+			 if (pos.x <= 0		   ) ++lr.y;
+		else if (pos.x >= winsize.x) ++lr.x;
 
-		cout << "[Left: " << setw(3) << lr.x << " | Right: " << setw(3) << lr.y << "]\r";
+		cout << "[Izquierda: " << setw(3) << lr.x << " | Derecha: " << setw(3) << lr.y << "]\r";
 	}
 
 	if (pos.y >= winsize.y || pos.y <= 0) flipY();

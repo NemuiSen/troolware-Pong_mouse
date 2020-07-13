@@ -8,9 +8,6 @@ Window::~Window()
 
 Window::Window(Vec2<int> size, string title)
 : window(glfwCreateWindow(size.x, size.y, title.c_str(), NULL, NULL))
-{ init(); }
-
-void Window::init()
 {
 	if(!window)
 	{

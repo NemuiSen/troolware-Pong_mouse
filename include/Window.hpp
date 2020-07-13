@@ -8,7 +8,6 @@ struct Window
 	~Window();
 	Window(Vec2<int> size, string title);
 	Window(GLFWmonitor *monitor, string title);
-	void init();
 	void run();
 	inline Window &operator<<(shared_ptr<Object> object) {
 		objects.push_back(object);

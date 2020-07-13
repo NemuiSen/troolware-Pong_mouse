@@ -8,10 +8,10 @@ Player::Player(Vec2<float> pos, Vec2<float> size, Vec2<int> keys, shared_ptr<Bal
 
 void Player::update(GLFWwindow *window)
 {
-	bool outUp = pos.y >= 0.1,
-	   outDown = pos.y <= -1,
-	    needUp = glfwGetKey(window, keys.x) == GLFW_PRESS,
-	  needDown = glfwGetKey(window, keys.y) == GLFW_PRESS;
+	bool outUp    = pos.y >= .1,
+		 outDown  = pos.y <= -1,
+		 needUp   = glfwGetKey(window, keys.x) == GLFW_PRESS,
+		 needDown = glfwGetKey(window, keys.y) == GLFW_PRESS;
 
 	if (needUp   &&   !outUp) pos.y += 0.05f;
 	if (needDown && !outDown) pos.y -= 0.05f;

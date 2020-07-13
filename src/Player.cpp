@@ -29,9 +29,7 @@ void Player::update(GLFWwindow *window)
 void Player::draw(GLFWwindow *window) const
 {
 	glBegin(GL_QUADS);
-		glColor3f(1, 1, 1);
 		glVertex2f(pos.x	   , pos.y		 );
-		glColor3f(1, 0, 0);
 		glVertex2f(pos.x+size.x, pos.y		 );
 		glVertex2f(pos.x+size.x, pos.y+size.y);
 		glVertex2f(pos.x	   , pos.y+size.y);

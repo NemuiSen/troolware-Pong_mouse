@@ -17,7 +17,7 @@ int main()
 	const GLFWvidmode *mode  = glfwGetVideoMode(glfwGetPrimaryMonitor());
 
 	Window window({mode->width-1, mode->height-1}, "Howdy!");
-	shared_ptr<Ball> ball(new Ball({500, 200}));
+	shared_ptr<Ball> ball(new Ball({mode->width/2.f, mode->height/2.f}));
 	window << shared_ptr<Player>(new Player({-0.7, -0.4}, {0.05, 0.9}, { GLFW_KEY_W,    GLFW_KEY_S}, ball));
 	window << shared_ptr<Player>(new Player({ 0.7, -0.4}, {0.05, 0.9}, {GLFW_KEY_UP, GLFW_KEY_DOWN}, ball));
 	window << ball;
